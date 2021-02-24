@@ -3,12 +3,12 @@ kind: ClusterRole
 metadata:
   name: default
 rules:
-- apiGroups:
-  - '*'
-  resources:
-  - '*'
-  verbs:
-  - '*'
+  - apiGroups:
+      - "*"
+    resources:
+      - "*"
+    verbs:
+      - "*"
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
@@ -19,9 +19,9 @@ roleRef:
   kind: ClusterRole
   name: cluster-admin
 subjects:
-- kind: ServiceAccount
-  name: default
-  namespace: default
+  - kind: ServiceAccount
+    name: default
+    namespace: default
 ---
 apiVersion: build.openshift.io/v1
 kind: BuildConfig
@@ -41,7 +41,7 @@ spec:
   source:
     type: Git
     git:
-      uri: 'https://github.com/ably77/oc-client.git'
+      uri: "https://github.com/rcdelacruz/oc-client.git"
   strategy:
     type: Docker
     #dockerStrategy:
@@ -55,7 +55,7 @@ spec:
   output:
     to:
       kind: ImageStreamTag
-      name: 'oc-client:latest'
+      name: "oc-client:latest"
 ---
 kind: DeploymentConfig
 apiVersion: apps.openshift.io/v1
@@ -87,7 +87,7 @@ spec:
         from:
           kind: ImageStreamTag
           namespace: default
-          name: 'oc-client:latest'
+          name: "oc-client:latest"
   replicas: 1
   revisionHistoryLimit: 10
   selector:
@@ -108,14 +108,14 @@ spec:
               protocol: TCP
           imagePullPolicy: Always
           command:
-          - /bin/bash
-          - -x
-          - -c
-          - |           
-            git clone https://github.com/ably77/openshift-testbed.git
-            cd openshift-testbed
-            ./scripts/runme.sh aws
-            oc delete dc/openshift-testbed-installer -n default
+            - /bin/bash
+            - -x
+            - -c
+            - |
+              git clone https://github.com/rcdelacruz/openshift-testbed.git
+              cd openshift-testbed
+              ./scripts/runme.sh aws
+              oc delete dc/openshift-testbed-installer -n default
       restartPolicy: Always
       terminationGracePeriodSeconds: 30
 ---

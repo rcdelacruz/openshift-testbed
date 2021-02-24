@@ -9,19 +9,19 @@ spec:
     name: create-webhook
   inputs:
     params:
-    - name: GitHubOrg
-      value: "ably77"
-    - name: GitHubUser
-      value: "ably77"
-    - name: GitHubRepo
-      value: "vote-api"
-    - name: GitHubSecretName
-      value: webhook-secret
-    - name: GitHubAccessTokenKey
-      value: token
-    - name: GitHubSecretStringKey
-      value: secret
-    - name: ExternalDomain
-      value: http://vote-cicd-eventlistener-pipelines-tutorial.apps.ly-demo.openshiftaws.com
+      - name: GitHubOrg
+        value: "rcdelacruz"
+      - name: GitHubUser
+        value: "rcdelacruz"
+      - name: GitHubRepo
+        value: "vote-api"
+      - name: GitHubSecretName
+        value: webhook-secret
+      - name: GitHubAccessTokenKey
+        value: token
+      - name: GitHubSecretStringKey
+        value: secret
+      - name: ExternalDomain
+        value: http://vote-cicd-eventlistener-pipelines-tutorial.apps.ly-demo.openshiftaws.com
   timeout: 1000s
   serviceAccountName: tekton-triggers-createwebhook

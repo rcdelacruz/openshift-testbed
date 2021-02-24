@@ -13,7 +13,7 @@ spec:
   output:
     to:
       kind: ImageStreamTag
-      name: 'airline-predictions-generator:latest'
+      name: "airline-predictions-generator:latest"
   resources: {}
   successfulBuildsHistoryLimit: 5
   failedBuildsHistoryLimit: 5
@@ -34,7 +34,7 @@ spec:
   source:
     type: Git
     git:
-      uri: 'https://github.com/ably77/airlineprediction-generator'
+      uri: "https://github.com/rcdelacruz/airlineprediction-generator"
   triggers:
     - type: GitHub
       github:

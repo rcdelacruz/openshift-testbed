@@ -1,6 +1,6 @@
 #!/bin/bash
 
-GITHUB_USER=ably77
+GITHUB_USER=rcdelacruz
 
 oc delete project ${GITHUB_USER}-dev-environment
 oc delete project ${GITHUB_USER}-stage-environment

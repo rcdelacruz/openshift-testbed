@@ -8,7 +8,7 @@ spec:
   params:
     - name: url
       #value: http://github.com/openshift-pipelines/vote-api.git
-      value: http://github.com/ably77/vote-api
+      value: http://github.com/rcdelacruz/vote-api
 ---
 apiVersion: tekton.dev/v1alpha1
 kind: PipelineResource
@@ -29,7 +29,7 @@ spec:
   params:
     - name: url
       #value: http://github.com/openshift-pipelines/vote-ui.git
-      value: http://github.com/ably77/vote-ui
+      value: http://github.com/rcdelacruz/vote-ui
 ---
 apiVersion: tekton.dev/v1alpha1
 kind: PipelineResource

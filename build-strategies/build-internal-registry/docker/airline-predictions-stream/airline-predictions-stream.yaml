@@ -13,7 +13,7 @@ spec:
   output:
     to:
       kind: ImageStreamTag
-      name: 'airline-predictions-stream:latest'
+      name: "airline-predictions-stream:latest"
   resources: {}
   successfulBuildsHistoryLimit: 5
   failedBuildsHistoryLimit: 5
@@ -35,9 +35,9 @@ spec:
   source:
     type: Git
     git:
-      uri: 'https://github.com/ably77/kafka-streams-machine-learning-examples'
-      ref: 'master'
-    contextDir: '/h2o-gbm'
+      uri: "https://github.com/rcdelacruz/kafka-streams-machine-learning-examples"
+      ref: "master"
+    contextDir: "/h2o-gbm"
   triggers:
     - type: GitHub
       github:
@@ -79,7 +79,7 @@ spec:
         from:
           kind: ImageStreamTag
           namespace: builds-tutorial
-          name: 'airline-predictions-stream:latest'
+          name: "airline-predictions-stream:latest"
   replicas: 1
   revisionHistoryLimit: 10
   selector:

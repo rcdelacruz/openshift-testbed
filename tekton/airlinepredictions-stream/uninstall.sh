@@ -1,6 +1,6 @@
 #!/bin/bash
 
-GITHUB_USERNAME=ably77
+GITHUB_USERNAME=rcdelacruz
 
 #oc delete -f fullpipeline.yaml
 

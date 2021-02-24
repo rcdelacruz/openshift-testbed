@@ -17,7 +17,7 @@ fi
 oc delete applications -n argocd --all
 
 # delete argocd cluster
-oc delete -k https://github.com/ably77/openshift-testbed-apps/kustomize/instances/overlays/operators/namespaced-operators/argocd-operator
+oc delete -k https://github.com/rcdelacruz/openshift-testbed-apps/kustomize/instances/overlays/operators/namespaced-operators/argocd-operator
 
 # delete CSVs
 oc delete csv -n openshift-operators --all

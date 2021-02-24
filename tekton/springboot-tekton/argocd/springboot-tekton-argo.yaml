@@ -8,7 +8,7 @@ metadata:
 spec:
   project: main
   source:
-    repoURL: https://github.com/ably77/springboot-tekton-argo
+    repoURL: https://github.com/rcdelacruz/springboot-tekton-argo
     targetRevision: HEAD
     path: .
   destination:
